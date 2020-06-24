@@ -1,1 +1,157 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="lactose.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src=async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQrQ6MfgMW9CHfVMVC0TBdOTh151NXvio&callback=initMap"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        $('#searchinput').keyup(function(){
+          var input;
+          input = document.getElementById('searchinput');
+          filter = input.value.toUpperCase();
+          li = document.getElementsByClassName('dairy');
+
+          for (i = 0; i < li.length; i++){
+            a = li[i].getElementsByTagName('h3')[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1){
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          };
+        });
+      });
+  </script>
+  </head>
+  <body>
+    <input type="text" id="searchinput" placeholder="Type Here...">
+    <div class="container">
+      <div class="dairy">
+        <h3>Feta Cheese</h3>
+        <p>0.14g lactose per serving</p>
+        <div class="placeholder">
+          <img src="images/feta.jpg" alt="Feta">
+        </div>
+      </div>
+
+  <div class="dairy">
+    <h3>Parmesan Cheese</h3>
+    <p>0.015g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/parmesan.jpg" alt="Parmesan">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Ricotta Cheese</h3>
+    <p>0.183g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/ricotta.jpg" alt="Ricotta">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Cottage Cheese</h3>
+    <p>9.04g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/cottagecheese.jpg" alt="Cottage Cheese">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Sour Cream</h3>
+    <p>4g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/sourcream.jpg" alt="Sour Cream">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Ice Cream</h3>
+    <p>6g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/icecream.jpg" alt="Ice Cream">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Milk Chocolate</h3>
+    <p>4.18g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/milkchoco.jpg" alt="Milk Chocolate">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Whole Milk</h3>
+    <p>11.28g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/wholemilk.jpg" alt="Whole Milk">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Cheddar Cheese</h3>
+    <p>0.028g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/cheddar.jpg" alt="Cheddar Cheese">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Whipped Cream</h3>
+    <p>1.68g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/whippedcream.jpg" alt="Whipped Cream">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Butter</h3>
+    <p>0.14g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/butter.jpg" alt="Butter">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Half and Half</h3>
+    <p>0.48g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/halfandhalf.jpg" alt="Half and Half">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Skim Milk</h3>
+    <p>12.48g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/skimmilk.jpg" alt="Skim Milk">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Cream Cheese</h3>
+    <p>0.25g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/creamcheese.jpg" alt="Cream Cheese">
+    </div>
+  </div>
+
+  <div class="dairy">
+    <h3>Kefir</h3>
+    <p>9.96g lactose per serving</p>
+    <div class="placeholder">
+      <img src="images/kefir.jpg" alt="Kefir">
+    </div>
+  </div>
+  </div>
+  </body>
+</html>

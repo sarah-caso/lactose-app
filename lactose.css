@@ -1,0 +1,46 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+div.dairy{
+  outline: 2px solid black;
+  text-align: center;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+div.placeholder{
+  overflow: hidden;
+  width: 225px;
+  height: 150px;
+  display: inline-block;
+}
+div.container{
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  div.container{
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  div.container{
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+#searchinput{
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 60%;
+}
