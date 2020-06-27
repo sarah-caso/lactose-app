@@ -11,6 +11,8 @@ header{
   color: #f2f2f2;
   text-align: center;
   margin-bottom: 30px;
+  font-size: 50px;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .topnav li{
@@ -23,13 +25,13 @@ header{
 
 .topnav ul a{
   color: #f2f2f2;
+  font-family: 'Roboto Slab', serif;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
   font-variant: small-caps;
-  font-family: "Gill Sans", sans-serif;
-  margin-right: 75px;
-  margin-left: 75px;
+  margin-right: 5px;
+  margin-left: 0px;
 }
 
 div.dairy{
@@ -54,9 +56,20 @@ div.container{
   justify-content: center;
 }
 
+@media only screen and (min-width: 575px) {
+  .topnav ul a{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   div.container{
     grid-template-columns: auto auto auto;
+  }
+  .topnav ul a{
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 
@@ -64,7 +77,22 @@ div.container{
   div.container{
     grid-template-columns: auto auto auto auto;
   }
+  .topnav ul a{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
+
+@media only screen and (min-width: 1500px) {
+  div.container{
+    grid-template-columns: auto auto auto auto;
+  }
+  .topnav ul a{
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
 
 #searchinput{
   display: block;

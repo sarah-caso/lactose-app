@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lactose.css"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,33 +18,42 @@
           li = document.getElementsByClassName('dairy');
 
           for (i = 0; i < li.length; i++){
-            a = li[i].getElementsByTagName('h3')[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1){
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
+            var indexList = [];
+            for (j = 0; j < li[i].classList.length; j++){
+              txtValue = li[i].classList[j];
+              txtIndex = txtValue.toUpperCase().indexOf(filter)
+              indexList.push(txtIndex);
+            };
+            for (j = 0; j < indexList.length; j++){
+              if (indexList[j] > -1){
+                li[i].style.display = "";
+                break;
+              }
+              else{
+                li[i].style.display = "none";
+              }
+            };
           };
         });
-      });
+        });
   </script>
   </head>
   <body>
     <header>
       <div class = "topnav">
-        <h1>A Little Dairy</h1>
+        <h1>A Little Lactose</h1>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Lactose Info</a></li>
-          <li><a href="#">My Intake</a></li>
+          <li><a href="lactose-home.html">Home</a></li>
+          <li><a href="lactose-about.html">About</a></li>
+          <li><a href="index.html">Lactose Info</a></li>
+          <li><a href="lactose-intake.html">My Intake</a></li>
+          <li><a href="lactose-swap-guide.html">Swap Guide</a></li>
         </ul>
       </div>
     </header>
-    <input type="text" id="searchinput" placeholder="Type Here...">
+    <input type="text" id="searchinput" placeholder="Search for Dairy Products">
     <div class="container">
-      <div class="dairy">
+      <div class="dairy feta cheese">
         <h3>Feta Cheese</h3>
         <p>0.14g lactose per serving</p>
         <div class="placeholder">
@@ -51,7 +61,7 @@
         </div>
       </div>
 
-  <div class="dairy">
+  <div class="dairy parmesan cheese">
     <h3>Parmesan Cheese</h3>
     <p>0.015g lactose per serving</p>
     <div class="placeholder">
@@ -59,7 +69,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy ricotta cheese">
     <h3>Ricotta Cheese</h3>
     <p>0.183g lactose per serving</p>
     <div class="placeholder">
@@ -67,7 +77,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy cottage cheese">
     <h3>Cottage Cheese</h3>
     <p>9.04g lactose per serving</p>
     <div class="placeholder">
@@ -75,7 +85,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy sour cream toppings">
     <h3>Sour Cream</h3>
     <p>4g lactose per serving</p>
     <div class="placeholder">
@@ -83,7 +93,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy ice cream dessert">
     <h3>Ice Cream</h3>
     <p>6g lactose per serving</p>
     <div class="placeholder">
@@ -91,7 +101,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy milk chocolate dessert">
     <h3>Milk Chocolate</h3>
     <p>4.18g lactose per serving</p>
     <div class="placeholder">
@@ -99,7 +109,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy whole milk">
     <h3>Whole Milk</h3>
     <p>11.28g lactose per serving</p>
     <div class="placeholder">
@@ -107,7 +117,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy cheddar cheese">
     <h3>Cheddar Cheese</h3>
     <p>0.028g lactose per serving</p>
     <div class="placeholder">
@@ -115,7 +125,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy whipped cream dessert topping">
     <h3>Whipped Cream</h3>
     <p>1.68g lactose per serving</p>
     <div class="placeholder">
@@ -123,7 +133,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy butter spread">
     <h3>Butter</h3>
     <p>0.14g lactose per serving</p>
     <div class="placeholder">
@@ -131,7 +141,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy half and half cream milk">
     <h3>Half and Half</h3>
     <p>0.48g lactose per serving</p>
     <div class="placeholder">
@@ -139,7 +149,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy milk">
     <h3>Skim Milk</h3>
     <p>12.48g lactose per serving</p>
     <div class="placeholder">
@@ -147,7 +157,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy cheese cream spread">
     <h3>Cream Cheese</h3>
     <p>0.25g lactose per serving</p>
     <div class="placeholder">
@@ -155,7 +165,7 @@
     </div>
   </div>
 
-  <div class="dairy">
+  <div class="dairy milk probiotic">
     <h3>Kefir</h3>
     <p>9.96g lactose per serving</p>
     <div class="placeholder">
